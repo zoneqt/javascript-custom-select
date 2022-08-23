@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+
+.custom-select-container {
+    position: relative;
+    display: block;
+    max-width: 380px;
+    width: 100%;
+    outline: none;
+}
+
+.custom-select-container:focus > .custom-select-value {
+    background-color: #ededed;
+    outline: none;
+  }
+
+.custom-select-value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    user-select: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 18px;
+    box-shadow: 0 0 20px rgba(0,0,0, .09);
+}
+
+.custom-select-value:hover{
+    background-color: #ededed;
+}
+
+.custom-select-value svg {
+    display: flex;
+    width: 13px;
+}
+
+.custom-select-options {
+    display: none;
+    position: absolute;
+    list-style: none;
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0,0,0, .09);
+    height: 300px;
+    overflow-y: overlay;
+}
+
+/* width */
+.custom-select-options::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .custom-select-options::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  .custom-select-options::-webkit-scrollbar-thumb {
+    background: rgb(190, 190, 190);
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  .custom-select-options::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+.custom-select-options.show {
+    display: block;
+}
+
+.custom-select-option {
+    padding: 7px 10px;
+    transition: background-color 100ms ease;
+    cursor: pointer;
+}
+
+.custom-select-option:hover {
+    background-color: #ededed;
+}
